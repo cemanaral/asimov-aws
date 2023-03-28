@@ -163,3 +163,11 @@ resource "aws_ecs_capacity_provider" "asimov-capacity-provider" {
 }
 
 ##########################################
+
+resource "aws_ecr_repository" "asimov-ecr-repository" {
+  name                 = "asimov-ecr-repository"
+  image_tag_mutability = "IMMUTABLE"
+  tags = {
+    Name = "Asimov ECR Repository"
+  }
+}
