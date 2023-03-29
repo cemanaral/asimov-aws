@@ -24,6 +24,7 @@ asimov_books = {
 
 @app.route('/')
 def index():
-    return jsonify(asimov_books, )
+    # return jsonify(asimov_books, )
+    return "cem"
 
 app.run(host='0.0.0.0', port=8080)
