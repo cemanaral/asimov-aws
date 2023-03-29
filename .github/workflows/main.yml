@@ -1,25 +1,18 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
-
 name: Deploy to Amazon ECS
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 env:
-  AWS_REGION: "eu-central-1"                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: "asimov-ecr-repository"           # set this to your Amazon ECR repository name
-  ECS_SERVICE: "asimov-service-3"                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: "asimov-cluster"                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: "infra/task-definition.json" # set this to the path to your Amazon ECS task definition
-                                               # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: "asimov-container"           # set this to the name of the container in the
-                                               # containerDefinitions section of your task definition
+  AWS_REGION: "eu-central-1"
+  ECR_REPOSITORY: "asimov-ecr-repository"
+  ECS_SERVICE: "asimov-service-3"
+  ECS_CLUSTER: "asimov-cluster"
+  ECS_TASK_DEFINITION: "infra/task-definition.json"
+  CONTAINER_NAME: "asimov-container"
+
 
 jobs:
   deploy:
