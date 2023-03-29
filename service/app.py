@@ -7,6 +7,7 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.add_url_rule("/health", "healthcheck", view_func=lambda: health.run())
 
 asimov_books = {
+    "author_of_this_app": "Cem Anaral",
     "prequel_novels": [
         {"Title": "Prelude to Foundation", "Year": 1988, "ISBN": "0-553-27839-8"},
         {"Title": "Forward to Foundation", "Year": 1993, "ISBN": "0-553-40488-1"}
@@ -24,7 +25,6 @@ asimov_books = {
 
 @app.route('/')
 def index():
-    # return jsonify(asimov_books, )
-    return "cem"
+    return jsonify(asimov_books)
 
 app.run(host='0.0.0.0', port=8080)
