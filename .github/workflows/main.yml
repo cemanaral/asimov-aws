@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: "eu-central-1"
-  ECR_REPOSITORY: "asimov-ecr-repository"
+  ECR_REPOSITORY: "asimov"
   ECS_SERVICE: "asimov-ecs-service"
   ECS_CLUSTER: "asimov-cluster"
   ECS_TASK_DEFINITION: "infra/task-definition.json"
