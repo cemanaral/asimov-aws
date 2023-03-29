@@ -4,7 +4,8 @@
         {
             "name": "asimov-container",
             "image": "476300129823.dkr.ecr.eu-central-1.amazonaws.com/asimov:latest",
-            "cpu": 0,
+            "cpu": 10,
+	    "memory": 250,
             "portMappings": [
                 {
                     "containerPort": 8080,
@@ -20,10 +21,7 @@
         }
     ],
     "executionRoleArn": "arn:aws:iam::476300129823:role/ecsTaskExecutionRole",
-    "networkMode": "bridge",
     "requiresCompatibilities": [
         "EC2"
-    ],
-    "cpu": "256",
-    "memory": "512"
+    ]
 }
