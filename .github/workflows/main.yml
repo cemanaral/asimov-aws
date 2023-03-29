@@ -8,7 +8,7 @@ on:
 env:
   AWS_REGION: "eu-central-1"
   ECR_REPOSITORY: "asimov-ecr-repository"
-  ECS_SERVICE: "asimov-service-3"
+  ECS_SERVICE: "asimov-ecs-service"
   ECS_CLUSTER: "asimov-cluster"
   ECS_TASK_DEFINITION: "infra/task-definition.json"
   CONTAINER_NAME: "asimov-container"
