@@ -7,6 +7,7 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.add_url_rule("/health", "healthcheck", view_func=lambda: health.run())
 
 asimov_books = {
+    "app_name": "asimov",
     "author_of_this_app": "Cem Anaral",
     "prequel_novels": [
         {"Title": "Prelude to Foundation", "Year": 1988, "ISBN": "0-553-27839-8"},
