@@ -2,12 +2,12 @@
     "family": "asimov",
     "containerDefinitions": [
         {
-            "name": "asimov",
-            "image": "476300129823.dkr.ecr.eu-central-1.amazonaws.com/asimov-ecr-repository:1",
+            "name": "asimov-container",
+            "image": "476300129823.dkr.ecr.eu-central-1.amazonaws.com/asimov:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "asimov-8080-tcp",
+                    "name": "asimov-container-8080-tcp",
                     "containerPort": 8080,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -26,8 +26,8 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "cpu": "512",
-    "memory": "1024",
+    "cpu": "256",
+    "memory": "512",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
