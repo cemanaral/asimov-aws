@@ -14,10 +14,9 @@
                 }
             ],
             "essential": true,
-            "environment": [],
-            "environmentFiles": [],
-            "mountPoints": [],
-            "volumesFrom": []
+	    "healthCheck": {
+                "command": [ "CMD-SHELL", "curl -f http://localhost:8080/health || exit 1" ]
+            }
         }
     ],
     "executionRoleArn": "arn:aws:iam::476300129823:role/ecsTaskExecutionRole",
